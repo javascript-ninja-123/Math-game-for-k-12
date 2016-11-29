@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>DES 1 Final Project</title>
+			<meta http-equiv="refresh" content="100">
+			<meta name="author" content="Sungmin Yi">
+			<meta name="description" content="Class Project index Page">
+			<meta name="keywords" content="HTML.CSS">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/png" href="img/logo.png"> 
+			<script src="https://use.fontawesome.com/4a70fc6be2.js"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+			<link rel="stylesheet" type="text/css" href="css/main.css">        
+		</head>
+		<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <img class="img-responsive logo" src="img/logo.png">
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#first" id="firstClick">Home</a></li>
+            <li><a href="Mathgame_copy/index.html" target="_blank">Game</a></li>
+            <li><a href="#about" id="aboutClick">About</a></li>
+            <li><a href="mailto:DESIGNTEAM@ucdavis.edu?Subject=Hello" target="_top">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <section id="first">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+             <div class="wrap">
+                <h1 class="effect">T.A.O</h1>
+                <p class="fade">A Math Game For Everyone</p>
+                <a class="cta outline fade" href="Mathgame_copy/index.html" target="_blank"><span>Play </span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1> About Us</h1>
+          </div>
+          <div class="col-md-6">
+            <img class="img-responsive" src="img/team.jpg">
+          <h4>Jonathan/Xin/Sung/Daria/Kausalya</h4>
+          </div>
+          <div class="col-md-6">
+            <h2>Team Mathematica</h2>
+            <h3>Pilloton Category: Education</h3>
+            <h4>Team Lead: <br><span class="name">Kausalya Raman</span></h4>
+            <h4>Material Designer: <br><span class="name">Jonathan Yu</span></h4>
+            <h4>Narrative Designer: <br><span class="name">Daria Zadorozhnaya</span></h4>
+            <h4>Graphic Designer: <br><span class="name">Xin Ye</span></h4>
+            <h4>Web Developer: <br><span class="name">Sungmin Yi</span></h4>
+            
+                 <h2>Team Bio</h2>
+            <h4 class="team-bio">Hey there! We know what it's like to struggle with math, as everyone has been there at some point. Not to worry though, as that's why our team has been developing a learning platform to help students all over the world with their math skills. It's who we are and what we do.  We want each and every one of you to excel in math.  With our intended focus on 8th Grade to High School level math,  Mathematica is an interactive math website that allows students to return to the fundamental skills in math that are necessary in solving higher level problems. Our goal is to make sure that students not just memorize the concepts temporarily, but master and be able to utilize them in the future as well. </h4>
+          </div>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+            <script>
+            $(document).ready(function(){
+
+              $("#about").css("display","none");
+              $("#aboutClick").click(function(){
+
+               
+                $("#first").slideUp(400);
+                $("#about").css("display","block");
+
+                $("#firstClick").click(function(){
+                $("#about").css("display","none");
+              
+                $("#first").slideDown(500);
+
+
+
+
+                });
+
+
+              });
+     
+
+
+            });
+            </script>
+            <script>
+
+            $(window).load(function(){
+  $('.effect').each(function(){
+    $(this).addClass('active');
+  })
+  $('.fade').addClass('active');
+})
+
+$(document).ready(function(){
+  
+  $('.cta').click(function(){
+    $('html, body').animate({
+      scrollTop: $("#anchor").offset().top
+    }, 1000);
+  });
+  
+  $('.first').bind('mousewheel', function(e){
+    return false;
+  });
+
+});
+            </script>
+  
+ 		
+
+
+                 <script>
+                 $(document).ready(function(){
+
+                
+
+                    $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 700, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+                  
+                    });
+                
+                 </script>
+
+
+		</body>
+	</html>
